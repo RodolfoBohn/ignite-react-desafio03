@@ -7,6 +7,7 @@ export const HeaderWrapper = styled.header`
   background-size: cover;
   width: 100%;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
+  padding-top: 4rem;
 `
