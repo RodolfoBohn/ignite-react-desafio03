@@ -11,7 +11,6 @@ export const ContentWrapper = styled.main`
 
 export const PostsWrapper = styled.div`
   margin-top: 3rem;
-  background: green;
   display: flex;
   gap: 2rem;
   flex-wrap: wrap;

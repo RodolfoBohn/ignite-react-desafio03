@@ -28,7 +28,7 @@ export const ProfileTitleWrapper = styled.div`
 
 export const ProfileTitle = styled.h1`
   color: ${props => props.theme.title};
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: bold;
 `
 export const GithubLinkWrapper = styled.div`
@@ -57,7 +57,7 @@ export const ProfileDescription = styled.p`
   overflow: hidden;
   -webkit-box-orient: vertical;
   margin-top: 0.5rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 
 `
 
