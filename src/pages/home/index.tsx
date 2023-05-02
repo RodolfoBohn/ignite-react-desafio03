@@ -1,7 +1,7 @@
-import { Header } from "../../components/header"
+import { HomeWrapper } from "./styles"
 
 export const Home = () => {
-  return (<div>
-    <Header />
-  </div>)
+  return (<HomeWrapper>
+    Opa
+  </HomeWrapper>)
 }
