@@ -16,6 +16,7 @@ body, input, textarea, button {
   font: 400 1rem Nunito, sans-serif;
   background: ${props => props.theme.background};
   color: ${({theme}) =>theme.text};
+  line-height: 1.6;
 }
 
 `
