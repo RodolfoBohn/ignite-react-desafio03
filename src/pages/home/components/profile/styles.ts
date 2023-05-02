@@ -24,7 +24,6 @@ export const ProfileTitleWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   width: 100%;
-  background: green;
 `
 
 export const ProfileTitle = styled.h1`
