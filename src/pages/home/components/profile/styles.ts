@@ -12,6 +12,7 @@ margin-top: -5.5rem;
 
 export const ProfileImage = styled.img`
   width: 9.25rem;
+  height: 9.25rem;
   border-radius: 8px;
   margin-left: 0.5rem;
 `
