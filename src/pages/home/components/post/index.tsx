@@ -1,20 +1,22 @@
 import { PostContent, PostDateCounter, PostTitle, PostTitleWrapper, PostWrapper } from "./styles"
 
-export const Post = () => {
+interface Props {
+  title: string
+  content: string
+  createdAt: Date
+  to: string
+}
+
+export const Post = ({title, content, createdAt, to}: Props) => {
   return (
-    <PostWrapper>
+    <PostWrapper to={to}>
       <PostTitleWrapper>
-        <PostTitle>JavaScript data types and data structures</PostTitle>
-        <PostDateCounter>Há 1 dia</PostDateCounter>
+        <PostTitle>{title}</PostTitle>
+        <PostDateCounter>{createdAt.toDateString()}</PostDateCounter>
       </PostTitleWrapper>
-      <PostContent>Programming languages all have built-in data structures, but these often differ from one language to another. This article attempts to list the built-in data structures available in JavaScript and what properties they have. These can be used to build other data structures. Wherever possible, comparisons with other languages are drawn.
-
-Dynamic typing
-JavaScript is a loosely typed and dynamic language. Variables in JavaScript are not directly associated with any particular value type, and any variable can be assigned (and re-assigned) values of all types:
-
-let foo = 42; // foo is now a number
-foo = 'bar'; // foo is now a string
-foo = true; // foo is now a boolean</PostContent>
+      <PostContent>
+        {content}
+      </PostContent>
     </PostWrapper>
   )
 }

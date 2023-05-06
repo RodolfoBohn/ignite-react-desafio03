@@ -4,7 +4,6 @@ import { useUserContext } from "../../../../context/user"
 
 export const Profile = () => {
   const {user, isLoading} = useUserContext()
-  console.log(user)
   return (
     <ProfileWrapper>
       {isLoading ? <div></div> : (

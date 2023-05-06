@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
-export const PostWrapper = styled.div`
+export const PostWrapper = styled(Link)`
   padding: 2rem;
   border-radius: 10px;
   background: ${props => props.theme.post};
@@ -9,6 +10,8 @@ export const PostWrapper = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
+  text-decoration: none;
+  color: inherit;
 `
 
 export const PostTitleWrapper = styled.div`
