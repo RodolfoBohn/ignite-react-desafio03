@@ -1,6 +1,7 @@
-import { ArrowSquareUpRight, GithubLogo, Buildings, Users } from "phosphor-react"
-import { GithubLink, GithubLinkWrapper, ProfileContent, ProfileDescription, ProfileImage, ProfileInfoContent, ProfileInfoWrapper, ProfileTitle, ProfileTitleWrapper, ProfileWrapper } from "./styles"
+import { GithubLogo, Buildings, Users } from "phosphor-react"
+import {  GithubLinkWrapper, ProfileContent, ProfileDescription, ProfileImage, ProfileInfoContent, ProfileInfoWrapper, ProfileTitle, ProfileTitleWrapper, ProfileWrapper } from "./styles"
 import { useUserContext } from "../../../../context/user"
+import { GithubLink } from "../../../../components/github-link"
 
 export const Profile = () => {
   const {user, isLoading} = useUserContext()
@@ -13,10 +14,7 @@ export const Profile = () => {
           <ProfileTitleWrapper>
             <ProfileTitle>{user.name}</ProfileTitle>
             <GithubLinkWrapper>
-              <GithubLink href={user.profileUrl} target="_blank">
-                <span>GITHUB</span>
-                <ArrowSquareUpRight size={14} />
-              </GithubLink>
+              <GithubLink href={user.profileUrl} text="GITHUB" />
             </GithubLinkWrapper>
           </ProfileTitleWrapper>
           <ProfileDescription>

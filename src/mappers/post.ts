@@ -6,7 +6,10 @@ export function postsMap(postResponse:PostResponse):PostItemData[] {
       id: postItem.id,
       content: postItem.body, 
       createdAt: new Date(postItem.created_at), 
-      title: postItem.title
+      title: postItem.title,
+      githubLink: postItem.html_url,
+      comments: postItem.comments, 
+      userLogin: postItem.user.login,
     }
   })
 }

@@ -6,6 +6,7 @@ import { postsMap } from "../mappers/post"
 
 interface PostContextProps {
   posts: PostItemData[]
+  filteredPostById: (id: number) => PostItemData | undefined
 }
 
 interface PostProviderProps {
@@ -27,8 +28,12 @@ export const PostProvider = ({children}:PostProviderProps) => {
     fetchPosts()
   },[])
 
+  const filteredPostById = (id: number) => {
+    return posts.find(post => post.id === id)
+  }
+
   return (
-    <PostContext.Provider value={{posts}}>
+    <PostContext.Provider value={{posts, filteredPostById}}>
       {children}
     </PostContext.Provider>
   )
